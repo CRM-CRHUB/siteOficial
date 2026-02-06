@@ -11,28 +11,24 @@ const Hero = () => {
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm font-medium mb-6">
               <Zap className="w-4 h-4" />
-              CRM inteligente para sua equipe
+              CRM para pequenas empresas, com grandes negócios
             </div>
 
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground leading-tight mb-6">
-              Gerencie suas vendas com{" "}
-              <span className="text-primary">simplicidade</span>
+              Menos planilhas menos bagunça
+              <span className="text-primary"> mais vendas.</span>
             </h1>
 
             <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0">
-              Centralize clientes, oportunidades e tarefas em uma única plataforma.
-              Aumente a produtividade da sua equipe e feche mais negócios.
+              Centralize seus leads, acompanhe negociações, e feche mais negócios em uma só plataforma.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button size="lg" className="gradient-primary border-0 text-base">
-                Conhecer o Sistema
+                Saiba mais
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-              <Button size="lg" variant="outline" className="text-base">
-                <SmartphoneIcon />
-                Entrar em Contato
-              </Button>
+           
             </div>
           </div>
 

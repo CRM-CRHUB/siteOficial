@@ -1,5 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { BarChart3, CheckSquare, Zap, User, CheckCircle2, LayoutDashboard, Sparkles } from "lucide-react";
+import {
+  BarChart3,
+  CheckSquare,
+  Zap,
+  User,
+  CheckCircle2,
+  LayoutDashboard,
+  Sparkles,
+} from "lucide-react";
 import { DashboardPreview } from "./DashboardPreview";
 import { FlexibilityIllustration } from "../feature/FlexibilityIllustration";
 
@@ -33,150 +41,184 @@ const features = [
 const Features = () => {
   return (
     <>
+      {/* ===== SOBRE / DASHBOARD ===== */}
+      <section id="sobre" className="py-12 md:py-16 bg-secondary/30">
+        <div className="container mx-auto px-4 lg:px-8">
 
-      <section
-        id="sobre"
-        className="py-16 md:py-24 bg-secondary/30"
-      >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-
-          <div className="grid lg:grid-cols-[1fr_1.4fr] gap-8 lg:gap-10 items-center">
+          <div className="grid lg:grid-cols-[1fr_1.4fr] gap-10 items-center">
             <div className="max-w-md">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
                 Conheça o{" "}
                 <span className="text-primary">CRM</span>{" "}
-                <span className="inline-flex items-center gap-2 align-middle">
+                <span className="inline-flex items-center gap-2">
                   <span className="w-16 h-8 rounded-lg gradient-primary flex items-center justify-center">
-                    <span className="text-primary-foreground font-bold text-sm">CRhub</span>
+                    <span className="text-primary-foreground text-sm font-bold">
+                      CRhub
+                    </span>
                   </span>
-                  {/* <span className="font-bold">Crhub</span> */}
                 </span>
               </h2>
 
-              <p className="text-muted-foreground text-base mb-4">
-                Uma plataforma completa para organizar vendas, clientes e processos em um
-                único lugar.
+              <p className="text-muted-foreground mb-5">
+                Uma plataforma completa para organizar vendas, clientes e processos em um único lugar.
               </p>
 
               <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <Sparkles className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                  <span className="text-sm text-muted-foreground leading-relaxed">
-                    Interface limpa e intuitiva para facilitar a rotina das equipes.
+                <li className="flex gap-3">
+                  <Sparkles className="h-5 w-5 text-primary shrink-0" />
+                  <span className="text-sm text-muted-foreground">
+                    Interface limpa e intuitiva.
                   </span>
                 </li>
 
-                <li className="flex items-start gap-3">
-                  <LayoutDashboard className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                  <span className="text-sm text-muted-foreground leading-relaxed">
-                    Controle completo de oportunidades, tarefas, clientes e métricas.
+                <li className="flex gap-3">
+                  <LayoutDashboard className="h-5 w-5 text-primary shrink-0" />
+                  <span className="text-sm text-muted-foreground">
+                    Controle total do negócio.
                   </span>
                 </li>
 
-                <li className="flex items-start gap-3">
-                  <BarChart3 className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                  <span className="text-sm text-muted-foreground leading-relaxed">
-                    Informações integradas para decisões mais rápidas e estratégicas.
+                <li className="flex gap-3">
+                  <BarChart3 className="h-5 w-5 text-primary shrink-0" />
+                  <span className="text-sm text-muted-foreground">
+                    Dados claros para decisões rápidas.
                   </span>
                 </li>
               </ul>
             </div>
+
             <DashboardPreview />
           </div>
 
-          <div className="mt-16 md:mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* FEATURES GRID */}
+          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="group bg-background border-border hover:border-primary/50 hover:shadow-xl transition-all duration-300"
+                className="bg-background hover:border-primary/40 hover:shadow-lg transition"
               >
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="w-6 h-6 text-primary-foreground" />
+                  <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center mb-4">
+                    <feature.icon className="h-6 w-6 text-primary-foreground" />
                   </div>
 
-                  <h3 className="text-lg font-semibold text-foreground mb-3">
-                    {feature.title}
-                  </h3>
+                  <h3 className="font-semibold mb-2">{feature.title}</h3>
 
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-sm text-muted-foreground">
                     {feature.description}
                   </p>
                 </CardContent>
               </Card>
             ))}
           </div>
-
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-secondary/20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* ===== PLANO ===== */}
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
 
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              Plano{" "}
+              <span className="inline-flex w-16 h-8 rounded-lg gradient-primary items-center justify-center">
+                <span className="text-primary-foreground text-sm font-bold">
+                  ELITE
+                </span>
+              </span>
+            </h2>
 
-            {/* Conteúdo */}
-            <div className="max-w-xl">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-5">
-                O <span className="text-primary">Crhub</span> é para minha empresa?
-              </h2>
+            <p className="text-muted-foreground mb-4">
+              Um único plano, sem limitações escondidas.
+            </p>
 
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Sim. O CRHub foi desenvolvido para se adaptar à realidade de diferentes tipos
-                de negócios. Ele não é um CRM engessado, mas uma plataforma flexível que se molda
-                à forma como sua empresa trabalha.
-              </p>
-
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                  <span className="text-sm text-muted-foreground">
-                    Escritórios, advogados e prestadores de serviço
-                  </span>
+            <ul className="space-y-3">
+              {[
+                "Até 4 usuários inclusos",
+                "Usuários extras por R$ 10/mês",
+                "Negócios ilimitados",
+                "Campos personalizados",
+                "E muito mais...",
+              ].map((item, i) => (
+                <li key={i} className="flex gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-primary shrink-0" />
+                  <span className="text-sm text-muted-foreground">{item}</span>
                 </li>
+              ))}
+            </ul>
+          </div>
 
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                  <span className="text-sm text-muted-foreground">
-                    Dentistas, nutricionistas, clínicas e profissionais da saúde
-                  </span>
+          <div className="grid sm:grid-cols-2 gap-6">
+            <Card className="hover:shadow-xl transition">
+              <CardContent className="p-6">
+                <span className="text-xs text-primary bg-primary/10 px-3 py-1 rounded-full">
+                  Mais escolhido
+                </span>
+
+                <h3 className="text-3xl font-bold mt-4">R$ 89,90</h3>
+
+                <p className="text-sm text-muted-foreground mb-5">por mês</p>
+
+                <button className="w-full h-11 border-2 border-primary rounded-lg hover:bg-primary/5 transition">
+                  Adquirir Mensal
+                </button>
+              </CardContent>
+            </Card>
+
+            <Card className="border-primary shadow-xl">
+              <CardContent className="p-6">
+                <span className="text-xs text-primary bg-primary/10 px-3 py-1 rounded-full">
+                  Mais econômico
+                </span>
+
+                <h3 className="text-3xl font-bold mt-4">R$ 899,00</h3>
+
+                <p className="text-sm text-muted-foreground mb-5">por ano</p>
+
+                <button className="w-full h-11 border-2 border-primary rounded-lg hover:bg-primary/5 transition">
+                  Adquirir Anual
+                </button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== PARA QUEM É ===== */}
+      {/* <section className="py-12 md:py-16 bg-secondary/20">
+        <div className="container mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+
+          <div>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              O <span className="text-primary">CRhub</span> é para minha empresa?
+            </h2>
+
+            <p className="text-muted-foreground mb-5">
+              O CRhub se adapta à realidade do seu negócio — não é engessado.
+            </p>
+
+            <ul className="space-y-3">
+              {[
+                "Prestadores de serviço",
+                "Clínicas e profissionais da saúde",
+                "Agências e startups",
+                "Times comerciais",
+                "Negócios em crescimento",
+              ].map((item, i) => (
+                <li key={i} className="flex gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-primary shrink-0" />
+                  <span className="text-sm text-muted-foreground">{item}</span>
                 </li>
+              ))}
+            </ul>
+          </div>
 
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                  <span className="text-sm text-muted-foreground">
-                    Empresas de tecnologia, startups e agências
-                  </span>
-                </li>
-
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                  <span className="text-sm text-muted-foreground">
-                    Varejo, times comerciais e operações de vendas
-                  </span>
-                </li>
-
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                  <span className="text-sm text-muted-foreground">
-                    Negócios em crescimento que precisam de organização e visão
-                  </span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Visual */}
-
-
-            <div className="hidden lg:flex justify-center">
-              <FlexibilityIllustration />
-            </div>
-
+          <div className="hidden lg:flex justify-center">
+            <FlexibilityIllustration />
           </div>
 
         </div>
-      </section>
-
+      </section> */}
     </>
   );
 };
