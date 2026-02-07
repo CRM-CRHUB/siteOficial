@@ -9,14 +9,7 @@ export function DashboardPreviewContent() {
     <div className="space-y-6">
       
       {/* Header */}
-      <div className="space-y-1">
-        <h1 className="text-xl font-semibold text-foreground">
-          Dashboard
-        </h1>
-        <p className="text-sm text-muted-foreground">
-          Bem-vindo de volta! Aqui está um resumo da sua plataforma.
-        </p>
-      </div>
+     
 
       {/* Metrics */}
       <div className="grid grid-cols-4 gap-4">

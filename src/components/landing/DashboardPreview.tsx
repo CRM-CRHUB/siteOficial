@@ -13,7 +13,7 @@ export function DashboardPreview() {
 
       {/* Viewport */}
       <div className="relative h-[420px] overflow-hidden">
-        <div className="absolute top-0 left-0 origin-top-left scale-[0.55] pointer-events-none">
+        <div className="absolute top-0 left-0 origin-top-left scale-[0.60] pointer-events-none">
           <div className="w-[1200px] p-6">
             <DashboardPreviewContent />
           </div>
